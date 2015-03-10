@@ -22,3 +22,5 @@ var rule = fontFace('Super Font', {
 
 */
 ```
+
+On npm: [font-face-rule](https://www.npmjs.com/package/font-face-rule).
