@@ -17,5 +17,9 @@
   },
   "bugs": {
     "url": "https://github.com/cymen/font-face-rule/issues"
+  },
+  "dependencies": {
+    "font-face-attrs": "^1.0.0",
+    "indexof": "0.0.1"
   }
 }

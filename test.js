@@ -46,3 +46,15 @@ test('it correctly handles font-weight and font-style', function(t) {
     '@font-face {\nfont-family: Super Font;\nsrc: local("☺︎"), url(super_font.woff);\nfont-weight: normal;\nfont-style: normal;\n}'
   );
 });
+
+test('it ignores options that are not valid font-face attributes', function(t) {
+  t.plan(1);
+
+  t.equal(
+    fontFace('Chunky5', {
+      src: ['url(chunkstyle.woff)'],
+      'monkey-business': 'abc123'
+    }),
+    '@font-face {\nfont-family: Chunky5;\nsrc: local("☺︎"), url(chunkstyle.woff);\n}'
+  );
+});

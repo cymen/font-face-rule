@@ -1,3 +1,6 @@
+var fontFaceAttrs = require('font-face-attrs');
+var indexOf = require('indexof');
+
 module.exports = function(family, options) {
   var output = [
     '@font-face {',
@@ -12,7 +15,7 @@ module.exports = function(family, options) {
   // re: local see http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/
   output.push('src: local("☺︎"), ' + src.join(', ') + ';');
   Object.keys(options).forEach(function(key) {
-    if (key !== 'src') {
+    if (key !== 'src' && indexOf(fontFaceAttrs, key) !== -1) {
       output.push(key + ': ' + options[key] + ';');
     }
   });
