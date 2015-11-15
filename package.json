@@ -1,6 +1,6 @@
 {
   "name": "font-face-rule",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Create @font-face rule",
   "main": "index.js",
   "scripts": {
